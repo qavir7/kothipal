@@ -1,6 +1,11 @@
-
 let slideIndex = 1;
-showSlides(slideIndex);
+window.onload = function () {
+    showSlides(slideIndex);    
+}
+
+setInterval(function () {
+    plusSlide(1);
+}, 5000);
 
 function plusSlide(n) {
     showSlides(slideIndex += n);
@@ -27,3 +32,5 @@ function showSlides(n) {
 
     slides[slideIndex - 1].style.display = "block";
 }
+
+
