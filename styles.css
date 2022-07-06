@@ -181,6 +181,17 @@ html, body {
     text-shadow: 2px 2px 2px #000;   
 }
 
+.category {
+    position: absolute;
+    top: 0;
+    margin: 10px;
+    padding: 5px 20px;
+    font-size: 1.25rem;
+    background-color: rgba(0, 0, 0, .4);
+    border-radius: 50px;
+    width: 100px;
+    text-align: center;
+}
 .prev, .next {
     position: absolute;
     font-size: 3rem;
@@ -273,7 +284,8 @@ html, body {
 .popular-li {    
     margin: 0 5% 0 0;
     padding: 3% 2%;
-    font-family: 'Yatra One', cursive;
+    /* font-family: 'Yatra One', cursive; */
+    font-family: 'Eczar', serif;
     font-size: 1.25rem;
     border-bottom: 1px solid #C4D7E0;
 }
@@ -293,6 +305,8 @@ html, body {
 
 .up {
     color: green;
+    font-family: 'Eczar', serif;
+    font-size: 1rem;
 }
 .fa-thumbs-down {
     color: red;
@@ -336,7 +350,7 @@ html, body {
 }
 
 .fa-brands:hover {
-    transform: rotate(360deg);
+    transform: rotate3d(0, 1, 0, 360deg);
     transform-origin: center;
     transition: transform 1s;
 }
