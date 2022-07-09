@@ -65,6 +65,7 @@ html, body {
 }
 
 .menu-list {
+
     margin: 0;
     list-style: none;
     padding: 0;
@@ -75,13 +76,15 @@ html, body {
 
 .menu-item {
     margin: 0;
-    float: left;
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
-    /* padding: .5% 5%; */
     border-right: 0.5px solid greenyellow;
 }
 
+.menu-img {
+    vertical-align: middle;
+    padding-right: 10px;
+}
 .menu-item.active {
     background-color: black;
 }
@@ -288,6 +291,15 @@ html, body {
     font-family: 'Eczar', serif;
     font-size: 1.25rem;
     border-bottom: 1px solid #C4D7E0;
+}
+
+.cat-img {
+    font-size: .75rem;
+    margin-left: 5%;
+    background-color: #C4D7E0;
+    color: #005 ;
+    padding: 0 5px;
+    border-radius: 25px;
 }
 
 .popular-symbol {
