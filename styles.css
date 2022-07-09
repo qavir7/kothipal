@@ -65,13 +65,11 @@ html, body {
 }
 
 .menu-list {
-
     margin: 0;
     list-style: none;
     padding: 0;
     display: flex;
-    align-content: stretch;
-    
+    align-content: stretch;    
 }
 
 .menu-item {
@@ -84,7 +82,9 @@ html, body {
 .menu-img {
     vertical-align: middle;
     padding-right: 10px;
+    width: 30px;
 }
+
 .menu-item.active {
     background-color: black;
 }
