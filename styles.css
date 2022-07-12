@@ -4,6 +4,7 @@
 
 html, body {
     margin: 0;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .title {
@@ -69,7 +70,7 @@ html, body {
     list-style: none;
     padding: 0;
     display: flex;
-    align-content: stretch;    
+    align-content: stretch;
 }
 
 .menu-item {
@@ -77,6 +78,7 @@ html, body {
     font-family: 'Teko', sans-serif;
     font-size: 1.5rem;
     border-right: 0.5px solid greenyellow;
+    color: hsl(242, 100, 16);
 }
 
 .menu-img {
@@ -85,9 +87,6 @@ html, body {
     width: 30px;
 }
 
-.menu-item.active {
-    background-color: black;
-}
 .menu-item:last-child {
     border: none;
 }
@@ -99,6 +98,121 @@ html, body {
 .menu-item a:active, .menu-item a.active {
     background-color: green;
     color: white;
+}
+
+.sub-menu {
+    visibility: hidden;
+    position: absolute;
+    width: 100%;
+    padding: 10px;
+    background-color: greenyellow;
+    box-shadow: 0 2px 2px black;
+    z-index: 1;
+}
+
+.sub-menu-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin-bottom: 5px;
+    /* column-gap: 3%; */
+}
+
+.sub-menu-title {
+    font-family: 'Teko', sans-serif;
+    font-size: 1.5rem;
+    margin: 0;
+    color: green;
+}
+
+.sub-menu-article {
+    overflow: hidden;
+    border-right: 2px solid #CAFF7A;
+    padding: 10px;
+}
+
+.sub-menu-article:last-child {
+    border: none;
+}
+
+.sub-heading-div {
+    position: relative;
+}
+
+.sub-article-heading {
+    font-size: 1.75rem;
+    text-align: start;
+    /* font-weight: bold; */
+    margin: 0;
+    font-family: 'Teko', sans-serif;
+}
+
+.see-all {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 10px;
+    font-size: .9rem;
+    font-style: oblique;
+    font-weight: bold;
+    background-color: greenyellow;
+    border: 1px solid green;
+    color: green;
+    border-radius: 10px;
+    text-decoration: none;
+    visibility: hidden;
+}
+
+.see-all:hover {
+    background-color: green;
+    color: white;
+}
+
+.article-items-ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.article-items-li {
+    vertical-align: middle;
+    /* border-bottom: 2px solid #CAFF7A; */
+    padding: 10px 5px;
+    height: 75px;
+}
+
+.article-items-li:last-child {
+    border: none;
+}
+
+.article-items-li:hover {
+    background-color: #CAFF7A;
+}
+
+.item-article-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    object-fit: cover;
+    float: left;
+    margin: 0 5px;
+}
+
+.item-article-heading {
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    vertical-align: middle;
+    margin: 0;
+}
+
+.sub-menu-img:hover {
+    border: 2px solid green;
+}
+
+.sub-menu-link {
+    text-decoration: none;
+    color: #000;
 }
 
 .link-item {
@@ -124,17 +238,20 @@ html, body {
     margin-right: 10px;
     border-radius: 50px;
     padding-left: 10px;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: .9rem;
 }
 
-.button {
+.btn {
     background: green;
-    /* background-image: linear-gradient(to bottom, #3498db, #2980b9); */
     border-radius: 28px;
     font-family: Arial;
     color: #ffffff;
     font-size: 16px;
     padding: 5px 20px 5px 20px;
     text-decoration: none;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 1rem;
 }
 
 .article-container {
@@ -142,6 +259,7 @@ html, body {
     width: auto;
     margin: 3% 2%;
 }
+
 .slide-show-container {
     position: relative;
     max-width: 60%;
@@ -158,9 +276,9 @@ html, body {
     position: relative;
     height: 100%;
     overflow: hidden;
-    /* border-radius: 0 50px 0 50px; */
     box-shadow: 2px 2px 2px gray, -2px -2px 2px gray;
 }
+
 .slide-img {
     width: 100%;
     height: 100%;
@@ -189,13 +307,14 @@ html, body {
     top: 0;
     margin: 10px;
     padding: 5px 20px;
-    font-size: 1.25rem;
+    font-size: 1rem;
     background-color: rgba(0, 0, 0, .4);
     border-radius: 50px;
     width: 100px;
     text-align: center;
 }
 .prev, .next {
+    /* visibility: hidden; */
     position: absolute;
     font-size: 3rem;
     top: 50%;
@@ -207,6 +326,11 @@ html, body {
     width: auto;
     border-radius: 0 3px 3px 0;
     transition: 0.6s ease;
+    opacity: .5;
+}
+
+.prev:hover, .next:hover {
+    opacity: 1;
 }
 
 .next {
@@ -287,7 +411,6 @@ html, body {
 .popular-li {    
     margin: 0 5% 0 0;
     padding: 3% 2%;
-    /* font-family: 'Yatra One', cursive; */
     font-family: 'Eczar', serif;
     font-size: 1.25rem;
     border-bottom: 1px solid #C4D7E0;
@@ -299,7 +422,7 @@ html, body {
     background-color: #C4D7E0;
     color: #005 ;
     padding: 0 5px;
-    border-radius: 25px;
+    border-radius: 10px;
 }
 
 .popular-symbol {
