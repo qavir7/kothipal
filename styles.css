@@ -464,12 +464,13 @@ html, body {
     /* background-color: rgba(173, 255, 47, 0.5); */
     background-color: brown;
     display: flex;
-    justify-content: stretch;
+    justify-content:space-between;
+    align-items: center;
     border-top: 1px solid rgba(173, 255, 47, 0.5);
 }
 
 .social-logos {
-    width: 50%;
+    /* width: 30%; */
     text-align: left;
     vertical-align: middle;
     font-size: 2rem;
@@ -490,8 +491,48 @@ html, body {
     transition: transform 1s;
 }
 
+.counter {
+    /* width: 30%; */
+    align-content: center;   
+}
+
+.page-visit {
+    color: #fff;
+    font-size: .75rem;
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.count-no {
+    font-size: .75rem;
+    font-weight: bold;
+    padding: 2px 7px;
+    border-radius: 5px;
+    background-color: black;
+    color: #fff;
+}
+
+.reset {
+    font-size: .75rem;
+    padding: 4px 10px;
+    margin-left: 10px;
+    background-color: brown;
+    border: 1px solid white;
+    border-radius: 5px;
+    color: white;
+}
+
+.reset:hover {
+    background-color: white;
+    color: brown;
+}
+
+.reset:active {
+    border: 2px;
+}
+
 .copyright {
-    width: 50%;
+    /* width: 30%; */
     text-align: right;
     padding-right: 10px;
     font-size: 1rem;

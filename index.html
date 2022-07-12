@@ -13,8 +13,27 @@
 
         <!-- Font Awesome Images -->
         <script src="https://kit.fontawesome.com/2d942bcf91.js" crossorigin="anonymous"></script>
+        <script src="actions.js" defer></script>
 
-        <!-- Javascript Files -->
+        <!--Fetch IP Info -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+             
+            <script>
+             
+            // Add "https://ipinfo.io" statement
+            // this will communicate with the ipify servers
+            // in order to retrieve the IP address
+            // $.get("https://ipinfo.io", function(response) {
+            //         alert(response.ip);
+            //     }, "json");
+                 
+            $.getJSON("https://api.ipify.org?format=json", function(data) {
+         
+         // Setting text of element P with id gfg
+                alert(data.ip);
+            });
+                // "json" shows that data will be fetched in json format
+            </script>
         
     </head>
     <body>
@@ -655,7 +674,7 @@
             </div>
         </div>
         
-        <script src="actions.js"></script>
+        
     </body>
 
     <footer class="footer"> 
@@ -666,9 +685,17 @@
             <a href="#"><i class="fa-brands fa-instagram-square"></i></a>
             <a href="#"><i class="fa-brands fa-telegram"></i></a>
         </div>
+        <!-- hitwebcounter Code START -->
+        <div class="counter">
+            <span class="page-visit">Page Visits:</span>
+            <span class="count-no" id="thousand">0</span>
+            <span class="count-no" id="hundred">0</span>
+            <span class="count-no" id="ten">0</span>
+            <span class="count-no" id="one">0</span>
+            <button class="reset">Reset</button>
+        </div>
         <div class="copyright">
             <p>©kothipal.com 2022. All Rights Reserved.</p>
         </div>
-        
     </footer>
 </html>
